@@ -1,11 +1,11 @@
 <script>
-    import Intro from "./Intro.svelte";
-
+  import Intro from "./Intro.svelte";
+  import Projects from "./Projects.svelte";
 </script>
 
 <main>
-	<Intro />
+  <Intro />
+  <Projects />
 </main>
-
 
 <style></style>

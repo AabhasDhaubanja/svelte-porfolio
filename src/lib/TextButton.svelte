@@ -1,12 +1,13 @@
-<button><slot/></button>
+<button><slot /></button>
 
 <style>
-button {
-	background: none;
-	outline: none;
-	border:none;
-	padding: 0;
-	margin: 0;
-	font-family: "Inter", sans-serif, system-ui
-}
+  button {
+    color: theme("colors.theme-gray-one");
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif, system-ui;
+  }
 </style>
