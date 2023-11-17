@@ -22,6 +22,7 @@ const config = {
     }),
     alias: {
       $utils: "src/utils",
+      $types: "src/types",
     },
   },
 };
