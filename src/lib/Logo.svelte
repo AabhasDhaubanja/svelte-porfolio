@@ -1,9 +1,7 @@
-<div class="text-2xl">
-	AD.
-</div>
+<div class="text-2xl text-theme-white">AD.</div>
 
 <style>
-div {
-	font-family: "Abril Fatface", Inter !important;
-}
+  div {
+    font-family: "Abril Fatface", Inter !important;
+  }
 </style>

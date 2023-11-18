@@ -1,7 +1,7 @@
 <script>
-  export const height = 18;
-  export const width = 18;
-  export const fill = "currentColor";
+  export let height = 18;
+  export let width = 18;
+  export let fill = "currentColor";
 </script>
 
 <svg

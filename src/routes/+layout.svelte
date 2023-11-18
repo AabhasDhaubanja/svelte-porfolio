@@ -23,6 +23,6 @@
   :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     background: theme("colors.theme-black");
-    color: theme("colors.theme-white");
+    color: theme("colors.theme-gray-one");
   }
 </style>
