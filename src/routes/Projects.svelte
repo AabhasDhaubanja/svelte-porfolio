@@ -97,9 +97,10 @@
   .description {
     background-image: linear-gradient(
       90deg,
-      theme("colors.theme-gray-two") 10%,
-      theme("colors.theme-white") 50%,
-      theme("colors.theme-gray-two") 90%
+      theme("colors.theme-gray-two"),
+      theme("colors.theme-white") 20%,
+      theme("colors.theme-white") 80%,
+      theme("colors.theme-gray-two")
     );
     background-clip: text;
     -webkit-text-fill-color: transparent;
