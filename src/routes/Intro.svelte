@@ -166,7 +166,7 @@
         </CoolButton>
         <TextButton>About Me</TextButton>
       </div>
-      <div class="py-12">
+      <div class="bounce py-12">
         <TextButton>
           <Arrow />
         </TextButton>
@@ -178,6 +178,22 @@
 <style>
   canvas {
     object-fit: contain;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .bounce {
+    animation: bounce infinite 1s;
   }
 
   section {

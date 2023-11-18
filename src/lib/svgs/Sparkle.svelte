@@ -1,6 +1,7 @@
 <script>
-  export let height = 24;
-  export let width = 24;
+  export const height = 24;
+  export const width = 24;
+  export const stroke = "currentColor";
 </script>
 
 <svg
@@ -9,7 +10,7 @@
   {height}
   fill="none"
   viewBox="0 0 24 24"
-  stroke="currentColor"
+  {stroke}
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"

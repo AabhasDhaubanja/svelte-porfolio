@@ -1,5 +1,8 @@
 <script>
   import Logo from "./Logo.svelte";
+  import Joystick from "./svgs/Joystick.svelte";
+  import PersonAdd from "./svgs/PersonAdd.svelte";
+  import Phone from "./svgs/Phone.svelte";
 </script>
 
 <nav
@@ -9,10 +12,19 @@
     <Logo />
   </a>
   <div>
-    <div class="flex gap-4 text-theme-gray-one uppercase text-xs font-medium">
-      <a class="hover:text-theme-white" href="/">Projects</a>
-      <a class="hover:text-theme-white" href="/">Socials</a>
-      <a class="hover:text-theme-white" href="/">Contact</a>
+    <div class="flex gap-8 text-theme-gray-one uppercase text-xs font-medium">
+      <a class="hover:text-theme-white flex gap-2 items-center" href="/">
+        <Joystick />
+        <span>Projects</span>
+      </a>
+      <a class="hover:text-theme-white flex gap-2 items-center" href="/">
+        <PersonAdd />
+        <span>Socials</span>
+      </a>
+      <a class="hover:text-theme-white flex gap-2 items-center" href="/">
+        <Phone />
+        <span>Contact</span>
+      </a>
     </div>
   </div>
 </nav>
