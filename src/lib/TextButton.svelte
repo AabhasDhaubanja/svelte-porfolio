@@ -1,10 +1,4 @@
-<script lang="ts">
-  import type { HTMLButtonAttributes } from "svelte/elements";
-
-  interface $$props extends HTMLButtonAttributes {}
-</script>
-
-<button {...$$props}><slot /></button>
+<button class="hover:text-theme-white transition-colors"><slot /></button>
 
 <style>
   button {
