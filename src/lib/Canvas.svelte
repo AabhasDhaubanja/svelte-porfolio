@@ -1,11 +1,5 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import Navbar from "$lib/Navbar.svelte";
-  import CoolButton from "$lib/CoolButton.svelte";
-  import TextButton from "$lib/TextButton.svelte";
-  import Arrow from "$lib/svgs/Arrow.svelte";
-  import Pen from "$lib/svgs/Pen.svelte";
-  import Sparkle from "$lib/svgs/Sparkle.svelte";
   import { min } from "$utils/min";
   import { expo } from "$utils/expo";
   import type { Circle } from "$types/Circle";
@@ -17,8 +11,9 @@
   // +ve --> fadingOut
   let state = 1;
 
+  let canvas: HTMLCanvasElement;
+
   const getCanvas = () => {
-    const canvas = document.querySelector("canvas");
     if (!canvas) return;
 
     const fw = window.innerWidth * window.devicePixelRatio;
@@ -139,81 +134,4 @@
 
 <svelte:window on:resize={handleWindowResize} />
 
-<section class="flex flex-col">
-  <canvas></canvas>
-
-  <div class="flex justify-center py-8">
-    <Navbar />
-  </div>
-
-  <div class="flex-1 flex flex-col justify-center items-center">
-    <div class="flex flex-col gap-4 items-center text-center">
-      <div class="text-theme-gray-one text-xl font-semibold">
-        <div class="flex items-center gap-4">
-          <Sparkle />
-          <span class="whitespace-nowrap"> Hi I'm Aabhas Dhaubanja </span>
-        </div>
-      </div>
-      <h2 class="title text-6xl font-bold">
-        I build user-friendly and visually appealing web applications
-      </h2>
-      <div class="flex justify-center gap-4">
-        <CoolButton>
-          <div
-            class="flex text-theme-gray-one hover:text-theme-white transition-colors gap-2 items-center"
-          >
-            <Pen />
-            Blog
-          </div>
-        </CoolButton>
-        <TextButton>About Me</TextButton>
-      </div>
-      <div class="bounce py-12">
-        <TextButton>
-          <Arrow />
-        </TextButton>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-  canvas {
-    object-fit: contain;
-  }
-
-  @keyframes bounce {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-
-  .bounce {
-    animation: bounce infinite 1s;
-  }
-
-  section {
-    min-height: 100vh;
-  }
-  .title {
-    max-width: 1024px;
-    height: auto;
-    background-image: linear-gradient(
-      180deg,
-      theme("colors.theme-white") 50%,
-      theme("colors.theme-gray-two")
-    );
-    line-height: 1.2;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -moz-text-fill-color: transparent;
-    -moz-background-clip: text;
-  }
-</style>
+<canvas bind:this={canvas}></canvas>
