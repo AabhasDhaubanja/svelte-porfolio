@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Work from "$lib/svgs/Work.svelte";
+  import Work from "$svgs/Work.svelte";
   import { createEventDispatcher } from "svelte";
   export let blurred = false;
   export let id = 0;

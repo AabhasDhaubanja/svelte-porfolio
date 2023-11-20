@@ -1,7 +1,11 @@
 <script>
   import Footer from "$lib/Footer.svelte";
+  import Navbar from "$lib/Navbar.svelte";
 </script>
 
+<div class="flex justify-center py-8">
+  <Navbar />
+</div>
 <slot />
 <Footer />
 

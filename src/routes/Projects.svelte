@@ -1,8 +1,8 @@
 <script lang="ts">
-  import Draw from "$lib/svgs/Draw.svelte";
-  import Extension from "$lib/svgs/Extension.svelte";
-  import Raven from "$lib/svgs/Raven.svelte";
-  import Work from "$lib/svgs/Work.svelte";
+  import Draw from "$svgs/Draw.svelte";
+  import Extension from "$svgs/Extension.svelte";
+  import Raven from "$svgs/Raven.svelte";
+  import Work from "$svgs/Work.svelte";
   import ProjectCard from "./ProjectCard.svelte";
   import type { SvelteComponent } from "svelte";
 

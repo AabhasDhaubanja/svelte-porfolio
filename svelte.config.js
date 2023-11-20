@@ -23,6 +23,7 @@ const config = {
     alias: {
       $utils: "src/utils",
       $types: "src/types",
+      $svgs: "src/svgs",
     },
   },
 };

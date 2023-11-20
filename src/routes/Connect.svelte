@@ -1,7 +1,7 @@
 <script>
   import Canvas from "$lib/Canvas.svelte";
   import CoolButton from "$lib/CoolButton.svelte";
-  import Phone from "$lib/svgs/Phone.svelte";
+  import Phone from "$svgs/Phone.svelte";
 </script>
 
 <section
