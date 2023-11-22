@@ -1,25 +1,8 @@
 <script>
-  import Mantine from "$svgs/Mantine.svelte";
-  import Project from "../Project.svelte";
-  import HackerNews from "./HackerNews.svelte";
-
-  const hobby = [
-    {
-      id: 1,
-      Component: Mantine,
-      title: "Mantine",
-      url: "https://github.com/mantinedev/mantine/pull/2893",
-    },
-    {
-      id: 2,
-      Component: HackerNews,
-      title: "Hacker News",
-      url: "https://aabhas-dhaubanja.github.io/web-point-assignment/",
-    },
-  ];
+  import List from "./List.svelte";
 </script>
 
-<div class="flex flex-col gap-4 w-full px-36">
+<div class="flex flex-col my-12 w-full px-36">
   <div class="flex flex-col gap-4 items-center">
     <h2 class="text-theme-white text-6xl font-semibold">Hobby Projects</h2>
     <span class="description">
@@ -27,12 +10,8 @@
     </span>
   </div>
 
-  <div class="grid grid-cols-4 gap-4 w-full my-16">
-    {#each hobby as { id, title, url, Component } (id)}
-      <Project {title} {url}>
-        <Component />
-      </Project>
-    {/each}
+  <div class="grid grid-cols-4 gap-4 w-full mt-12">
+    <List />
   </div>
 </div>
 

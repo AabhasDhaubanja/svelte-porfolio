@@ -4,6 +4,9 @@
   import { expo } from "$utils/expo";
   import type { Circle } from "$types/Circle";
 
+  export let position = "absolute";
+  export let noGradient = false;
+
   const circles: Circle[] = [];
   const OPACITY_SPEED = 0.005;
   // -1 < state < 1
@@ -35,7 +38,7 @@
     if (!canvas) return;
     const { ctx, fw, fh } = canvas;
     ctx.clearRect(0, 0, fw, fh);
-    renderGradient();
+    if (!noGradient) renderGradient();
 
     let i;
     if (state >= 1) {
@@ -102,10 +105,10 @@
     const c = getCanvas();
 
     if (!c) return;
-    const { canvas, ctx, fw, fh } = c;
+    const { canvas, fw, fh } = c;
 
     // styling the canvas
-    canvas.style.position = "absolute";
+    canvas.style.position = position;
     canvas.style.top = "0";
     canvas.style.left = "0";
     canvas.style.zIndex = "-1";
@@ -114,7 +117,7 @@
     canvas.width = fw;
     canvas.height = fh;
 
-    renderGradient();
+    if (!noGradient) renderGradient();
   };
 
   onMount(() => {

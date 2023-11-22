@@ -25,9 +25,7 @@
       </h2>
       <div class="flex justify-center gap-4">
         <CoolButton>
-          <div
-            class="flex text-theme-gray-one hover:text-theme-white transition-colors gap-2 items-center"
-          >
+          <div class="flex gap-2 items-center">
             <Pen />
             Blog
           </div>

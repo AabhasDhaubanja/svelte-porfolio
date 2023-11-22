@@ -19,9 +19,7 @@
   </div>
 
   <CoolButton>
-    <div
-      class="flex items-center gap-4 hover:text-theme-white transition-colors"
-    >
+    <div class="flex items-center gap-4">
       <Phone />
       <span>Contact Me</span>
     </div>

@@ -1,25 +1,8 @@
 <script>
-  import Project from "../Project.svelte";
-  import AgencyHeight from "./AgencyHeight.svelte";
-  import Hobnob from "./Hobnob.svelte";
-
-  const proprietary = [
-    {
-      id: 1,
-      Component: AgencyHeight,
-      title: "Agency Height",
-      url: "https://agencyheight.com",
-    },
-    {
-      id: 2,
-      Component: Hobnob,
-      title: "Hobnob",
-      url: "https://joinhobnob.com",
-    },
-  ];
+  import List from "./List.svelte";
 </script>
 
-<div class="flex flex-col gap-4 w-full px-36">
+<div class="flex flex-col my-12 w-full px-36">
   <div class="flex flex-col gap-4 items-center">
     <h2 class="text-theme-white text-6xl font-semibold">
       Proprietary Projects
@@ -29,12 +12,8 @@
     </span>
   </div>
 
-  <div class="grid grid-cols-4 gap-4 w-full my-16">
-    {#each proprietary as { id, title, url, Component } (id)}
-      <Project {title} {url}>
-        <Component />
-      </Project>
-    {/each}
+  <div class="grid grid-cols-4 gap-4 w-full mt-12">
+    <List />
   </div>
 </div>
 
