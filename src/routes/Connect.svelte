@@ -18,7 +18,7 @@
     <p>Let&sbquo;s explore the possibilities and see where it takes us!</p>
   </div>
 
-  <CoolButton>
+  <CoolButton href="/contact">
     <div class="flex items-center gap-4">
       <Phone />
       <span>Contact Me</span>
