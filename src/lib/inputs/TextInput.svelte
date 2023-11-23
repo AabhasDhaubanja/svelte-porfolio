@@ -25,6 +25,7 @@
 
 <style>
   input {
+    backdrop-filter: blur(2px);
     outline: none;
     border: 1px solid rgba(94, 234, 212, 0.5);
     border-radius: 8px;

@@ -40,6 +40,14 @@
 <style>
   nav {
     max-width: 1024px;
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(2px);
+  }
+
+  a:focus-visible,
+  a:active {
+    background: transparent;
+    outline: none;
+    color: theme("colors.theme-white");
+    text-shadow: 4px 4px 4px rgba(94, 234, 212, 0.4);
   }
 </style>

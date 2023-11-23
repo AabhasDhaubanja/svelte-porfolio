@@ -4,6 +4,7 @@
   export let size: "sm" | "md" = "md";
   export let href: string = "";
   export let type: "button" | "submit" = "button";
+  export let loading: boolean = false;
 
   const baseClass = "border-gray-100 rounded-full hover:text-theme-white";
 
@@ -22,7 +23,7 @@
     <slot />
   </a>
 {:else}
-  <button on:click={handleClick} {type} class={buttonClass}>
+  <button on:click={handleClick} {type} class={buttonClass} disabled={loading}>
     <slot />
   </button>
 {/if}
@@ -34,7 +35,7 @@
     border: 1px solid rgba(94, 234, 212, 0.5);
     box-shadow: inset 0px 2px 4px rgba(94, 234, 212, 0.8);
     transition: box-shadow 0.3s ease;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
     display: flex;
     align-items: center;
   }
@@ -49,5 +50,11 @@
   a:active {
     outline: none;
     border: 1px solid theme("colors.theme-cyan");
+  }
+
+  button:disabled {
+    box-shadow: none;
+    color: theme("colors.theme-gray-two");
+    border: 1px solid rgba(94, 234, 212, 0.2);
   }
 </style>
