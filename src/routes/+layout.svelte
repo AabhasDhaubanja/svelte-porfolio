@@ -3,7 +3,7 @@
   import Navbar from "$lib/Navbar.svelte";
 </script>
 
-<div class="flex justify-center py-8">
+<div class="p-8">
   <Navbar />
 </div>
 <slot />
@@ -33,5 +33,24 @@
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     background: theme("colors.theme-black");
     color: theme("colors.theme-gray-one");
+  }
+
+  :global(section) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  @media screen and (max-width: 640px) {
+    :global(section) {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    :global(section) {
+      padding-left: 36px;
+      padding-right: 36px;
+    }
   }
 </style>

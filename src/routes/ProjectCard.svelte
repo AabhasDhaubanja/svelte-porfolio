@@ -24,7 +24,7 @@
   class="flex flex-col gap-6 items-center cursor-pointer hover:scale-110 transition-all"
 >
   <div class="cyan-shadow">
-    <Component fill="#e5e7eb" height={128} width={128} />
+    <Component fill="#e5e7eb" />
   </div>
   <div class="flex flex-col gap-1 px-8">
     <h3 class="title text-lg text-theme-white font-bold">{title}</h3>
@@ -38,6 +38,8 @@
   }
 
   .cyan-shadow {
+    height: 128px;
+    width: 128px;
     filter: drop-shadow(4px 2px 0px theme("colors.theme-cyan"));
   }
 
@@ -52,5 +54,12 @@
     -webkit-background-clip: text;
     -moz-text-fill-color: transparent;
     -moz-background-clip: text;
+  }
+
+  @media screen and (max-width: 768px) {
+    .cyan-shadow {
+      height: 64px;
+      width: 64px;
+    }
   }
 </style>

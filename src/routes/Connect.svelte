@@ -5,10 +5,12 @@
 </script>
 
 <section
-  class="relative h-[100vh] flex flex-col gap-12 justify-center items-center"
+  class="relative h-[100svh] flex flex-col gap-12 justify-center items-center"
 >
   <Canvas />
-  <h2 class="text-theme-white text-6xl font-semibold">Lets Connect</h2>
+  <h2 class="text-theme-white text-3xl md:text-4xl xl:text-6xl font-semibold">
+    Lets Connect
+  </h2>
 
   <div class="flex flex-col items-center gap-8">
     <p>

@@ -53,7 +53,9 @@
 
 <section class="text-center mb-48">
   <div class="flex flex-col items-center gap-4">
-    <h2 class="text-theme-white text-6xl font-semibold">Projects</h2>
+    <h2 class="text-theme-white text-3xl md:text-4xl xl:text-6xl font-semibold">
+      Projects
+    </h2>
     <span class="description">
       Some of the notable projects I have worked on
     </span>
@@ -63,7 +65,7 @@
     role="button"
     tabindex="-1"
     on:mouseleave={handleMouseLeave}
-    class="flex justify-center pt-24 px-24"
+    class="grid grid-cols-2 lg:grid-cols-4 py-4 md:py-12 lg:p-24 gap-12 md:gap-0"
   >
     {#each projects as project (project.id)}
       {#if currentProject === null}

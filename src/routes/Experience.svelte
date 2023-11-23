@@ -13,10 +13,14 @@
   ];
 </script>
 
-<section class="text-center px-24">
+<section class="text-center md:px-24">
   <div class="wrapper py-24 flex flex-col gap-24 items-center">
     <div class="flex flex-col items-center gap-4">
-      <h2 class="text-theme-white text-6xl font-semibold">Experience</h2>
+      <h2
+        class="text-theme-white text-3xl md:text-4xl xl:text-6xl font-semibold"
+      >
+        Experience
+      </h2>
       <span class="description"> Companies I have worked with </span>
     </div>
 
@@ -59,5 +63,16 @@
     -webkit-background-clip: text;
     -moz-text-fill-color: transparent;
     -moz-background-clip: text;
+  }
+
+  @media screen and (max-width: 640px) {
+    .wrapper {
+      background: radial-gradient(
+        circle at 50% -100%,
+        theme("colors.theme-black") 73%,
+        theme("colors.theme-cyan"),
+        theme("colors.theme-white") 118%
+      );
+    }
   }
 </style>

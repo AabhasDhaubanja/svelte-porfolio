@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-  import Navbar from "$lib/Navbar.svelte";
   import CoolButton from "$lib/CoolButton.svelte";
   import TextButton from "$lib/TextButton.svelte";
   import Arrow from "$svgs/Arrow.svelte";
@@ -13,14 +11,14 @@
   <Canvas />
 
   <div class="flex-1 flex flex-col justify-center items-center">
-    <div class="flex flex-col gap-4 items-center text-center">
+    <div class="main-intro flex flex-col gap-4 items-center text-center">
       <div class="text-theme-gray-one text-xl font-semibold">
         <div class="flex items-center gap-4">
           <Sparkle />
           <span class="whitespace-nowrap"> Hi I'm Aabhas Dhaubanja </span>
         </div>
       </div>
-      <h2 class="title text-6xl font-bold">
+      <h2 class="title text-3xl md:text-4xl xl:text-6xl font-bold">
         I build user-friendly and visually appealing web applications
       </h2>
       <div class="flex justify-center gap-4">
@@ -42,10 +40,6 @@
 </section>
 
 <style>
-  canvas {
-    object-fit: contain;
-  }
-
   @keyframes bounce {
     0% {
       transform: translateY(0);
@@ -63,8 +57,13 @@
   }
 
   section {
-    min-height: 100vh;
+    min-height: 100svh;
   }
+
+  .main-intro {
+    transform: translateY(calc(-50px));
+  }
+
   .title {
     max-width: 1024px;
     height: auto;
