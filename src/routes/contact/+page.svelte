@@ -3,25 +3,52 @@
   import CoolButton from "$lib/CoolButton.svelte";
   import TextInput from "$lib/inputs/TextInput.svelte";
   import Send from "$svgs/Send.svelte";
+  import Progress from "$svgs/Progress.svelte";
+  import { toast } from "$lib/toast/store";
+  import Toast from "$lib/toast/Toast.svelte";
 
   let name: string = "";
   let email: string = "";
   let subject: string = "";
 
+  let loading = false;
+
   const handleSubmit = () => {
-    console.log(name, email, subject);
+    loading = true;
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({ name, email, subject }).toString(),
+    })
+      .then((res) => {
+        if (res.status.toString().startsWith("2")) {
+          toast("Message sent successfully");
+          name = "";
+          email = "";
+          subject = "";
+        } else {
+          toast("Something went wrong", "ERROR");
+        }
+      })
+      .catch(() => toast("Something went wrong", "ERROR"))
+      .finally(() => (loading = false));
   };
 </script>
 
 <div class="flex flex-col items-center gap-12 my-12">
-  <Canvas position="fixed" />
+  <Canvas position="fixed" noGradient />
 
   <div class="flex flex-col gap-4 text-center">
     <h2 class="text-theme-white text-6xl font-semibold">Contact Me</h2>
     <span class="description"> Love to hear from you, Get in touch! </span>
   </div>
 
-  <form class="flex flex-col gap-8" on:submit|preventDefault={handleSubmit}>
+  <form
+    data-netlify="true"
+    class="flex flex-col gap-8"
+    on:submit|preventDefault={handleSubmit}
+  >
     <div class="flex flex-col gap-4 w-[500px]">
       <TextInput bind:value={name} name="name" title="Name" required />
       <TextInput
@@ -33,13 +60,18 @@
       />
       <TextInput bind:value={subject} name="subject" title="Subject" required />
     </div>
-    <CoolButton type="submit">
+    <CoolButton type="submit" {loading}>
       <div class="flex items-center gap-2">
-        <Send />
+        {#if loading}
+          <Progress />
+        {:else}
+          <Send />
+        {/if}
         Submit
       </div>
     </CoolButton>
   </form>
+  <Toast />
 </div>
 
 <style>
