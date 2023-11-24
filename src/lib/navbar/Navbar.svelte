@@ -50,7 +50,7 @@
     tabindex="0"
     on:keypress={handleOpen}
     on:click={handleOpen}
-    class="flex md:hidden w-6"
+    class="flex md:hidden w-6 h-6"
   >
     <Menu />
   </div>
