@@ -2,6 +2,9 @@
   import List from "./List.svelte";
 </script>
 
+<svelte:head>
+  <title>Freelance Projects - Aabhas Dhaubanja</title>
+</svelte:head>
 <section class="flex flex-col my-12 w-full md:px-36 xl:px-48 2xl:px-64">
   <div class="flex flex-col gap-4 items-center">
     <h2 class="text-theme-white text-3xl md:text-4xl xl:text-6xl font-semibold">

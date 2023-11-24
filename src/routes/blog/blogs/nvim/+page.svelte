@@ -1,3 +1,6 @@
+<svelte:head>
+  <title>Why I am better than you - Aabhas Dhaubanja</title>
+</svelte:head>
 <div class="flex flex-col gap-12 items-center text-justify text-theme-white">
   <img
     class="aspect-video object-cover object-center w-full"
@@ -126,4 +129,13 @@
     transforming text editing into an art form that elevates productivity and
     enhances the coding experience.
   </p>
+
+  <div class="w-full">
+    <a
+      class="font-semibold text-theme-cyan underline"
+      href="https://github.com/AabhasDhaubanja/nvim"
+    >
+      Here is my minimal neovim setup to get you started.
+    </a>
+  </div>
 </div>

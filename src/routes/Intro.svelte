@@ -31,9 +31,7 @@
         <TextButton href="/about">About Me</TextButton>
       </div>
       <div class="bounce py-12">
-        <TextButton>
-          <Arrow />
-        </TextButton>
+        <Arrow />
       </div>
     </div>
   </div>

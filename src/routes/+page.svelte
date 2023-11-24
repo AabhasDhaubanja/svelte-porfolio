@@ -5,6 +5,9 @@
   import Projects from "./Projects.svelte";
 </script>
 
+<svelte:head>
+  <title>Aabhas Dhaubanja</title>
+</svelte:head>
 <main>
   <Intro />
   <Projects />

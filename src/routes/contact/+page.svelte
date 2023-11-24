@@ -36,6 +36,9 @@
   };
 </script>
 
+<svelte:head>
+  <title>Contact Me - Aabhas Dhaubanja</title>
+</svelte:head>
 <section class="flex flex-col items-center gap-12 my-12">
   <Canvas position="fixed" noGradient />
 

@@ -1,3 +1,6 @@
+<svelte:head>
+  <title>A journey into web development - Aabhas Dhaubanja</title>
+</svelte:head>
 <div class="flex flex-col gap-12 text-justify text-theme-white">
   <img
     class="aspect-video object-cover object-center"

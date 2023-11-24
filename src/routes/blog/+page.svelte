@@ -4,6 +4,9 @@
   import { blogs } from "./store";
 </script>
 
+<svelte:head>
+  <title>Blog - Aabhas Dhaubanja</title>
+</svelte:head>
 <section class="flex flex-col item-center text-center">
   <div
     class="flex items-center justify-center text-theme-gray-one text-xl font-medium py-12"

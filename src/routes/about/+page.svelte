@@ -2,6 +2,9 @@
   import Canvas from "$lib/Canvas.svelte";
 </script>
 
+<svelte:head>
+  <title>About Me - Aabhas Dhaubanja</title>
+</svelte:head>
 <section class="flex flex-col items-center gap-12 my-12">
   <Canvas position="fixed" noGradient />
   <div class="flex flex-col gap-12 items-center text-center">
