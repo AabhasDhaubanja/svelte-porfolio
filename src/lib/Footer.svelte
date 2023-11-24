@@ -13,7 +13,7 @@
       <a href="https://www.linkedin.com/in/aabhas-dhaubanja-94413a1b7/"
         >LINKEDIN</a
       >
-      <a href="/blogs">BLOGS</a>
+      <a href="/blog">BLOGS</a>
     </div>
   </div>
 </footer>
