@@ -36,20 +36,22 @@
   };
 </script>
 
-<div class="flex flex-col items-center gap-12 my-12">
+<section class="flex flex-col items-center gap-12 my-12">
   <Canvas position="fixed" noGradient />
 
   <div class="flex flex-col gap-4 text-center">
-    <h2 class="text-theme-white text-6xl font-semibold">Contact Me</h2>
+    <h2 class="text-theme-white text-3xl md:text-4xl xl:text-6xl font-semibold">
+      Contact Me
+    </h2>
     <span class="description"> Love to hear from you, Get in touch! </span>
   </div>
 
   <form
     data-netlify="true"
-    class="flex flex-col gap-8"
+    class="flex flex-col items-center gap-8 w-full"
     on:submit|preventDefault={handleSubmit}
   >
-    <div class="flex flex-col gap-4 w-[500px]">
+    <div class="flex flex-col gap-4 w-full sm:w-[500px]">
       <TextInput bind:value={name} name="name" title="Name" required />
       <TextInput
         bind:value={email}
@@ -72,7 +74,7 @@
     </CoolButton>
   </form>
   <Toast />
-</div>
+</section>
 
 <style>
   .description {

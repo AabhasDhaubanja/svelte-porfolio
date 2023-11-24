@@ -8,10 +8,12 @@
     <span>© 2023 Aabhas Dhaubanja</span>
 
     <div class="flex gap-2">
-      <TextButton>GITHUB</TextButton>
-      <TextButton>TWITTER</TextButton>
-      <TextButton>LINKEDIN</TextButton>
-      <TextButton>BLOGS</TextButton>
+      <a href="https://github.com/AabhasDhaubanja">GITHUB</a>
+      <a href="https://twitter.com/AabhasDhaubanja">TWITTER</a>
+      <a href="https://www.linkedin.com/in/aabhas-dhaubanja-94413a1b7/"
+        >LINKEDIN</a
+      >
+      <a href="/blogs">BLOGS</a>
     </div>
   </div>
 </footer>

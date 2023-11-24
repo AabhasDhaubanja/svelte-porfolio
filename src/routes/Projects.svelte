@@ -10,6 +10,7 @@
     id: number;
     title: string;
     description: string;
+    url: string;
     Component: typeof SvelteComponent<any>;
   };
 
@@ -18,24 +19,28 @@
       id: 1,
       title: "Proprietary",
       description: "Some of the work I have done as an employee",
+      url: "/projects/category/proprietary",
       Component: Work,
     },
     {
       id: 2,
       title: "Hobby",
       description: "Some of the work I have done in my &ldquo;free-time&rdquo;",
+      url: "/projects/category/hobby",
       Component: Extension,
     },
     {
       id: 3,
       title: "Design",
       description: "Some of the work I have designed",
+      url: "/projects/category/design",
       Component: Draw,
     },
     {
       id: 4,
       title: "Freelance",
       description: "Some of the work I have done as a freelancer",
+      url: "/projects/category/freelance",
       Component: Raven,
     },
   ];
@@ -67,28 +72,31 @@
     on:mouseleave={handleMouseLeave}
     class="grid grid-cols-2 lg:grid-cols-4 py-4 md:py-12 lg:p-24 gap-12 md:gap-0"
   >
-    {#each projects as project (project.id)}
+    {#each projects as { id, title, description, url, Component } (id)}
       {#if currentProject === null}
         <ProjectCard
-          on:mouseenter={() => handleMouseEnter(project.id)}
-          title={project.title}
-          description={project.description}
-          Component={project.Component}
+          on:mouseenter={() => handleMouseEnter(id)}
+          {title}
+          {description}
+          {url}
+          {Component}
         />
-      {:else if currentProject === project.id}
+      {:else if currentProject === id}
         <ProjectCard
-          on:mouseenter={() => handleMouseEnter(project.id)}
-          title={project.title}
-          description={project.description}
-          Component={project.Component}
+          on:mouseenter={() => handleMouseEnter(id)}
+          {title}
+          {description}
+          {url}
+          {Component}
         />
       {:else}
         <ProjectCard
-          on:mouseenter={() => handleMouseEnter(project.id)}
+          on:mouseenter={() => handleMouseEnter(id)}
           blurred={true}
-          title={project.title}
-          description={project.description}
-          Component={project.Component}
+          {title}
+          {description}
+          {url}
+          {Component}
         />
       {/if}
     {/each}

@@ -23,7 +23,7 @@
           <Close height={14} width={14} />
         </div>
       {/if}
-      {message}
+      <span class="whitespace-nowrap">{message}</span>
     </div>
   {/each}
 </div>

@@ -6,6 +6,7 @@
   export let title = "";
   export let description = "";
   export let Component = Work;
+  export let url = "";
 
   const dispatch = createEventDispatcher();
 
@@ -16,9 +17,8 @@
   };
 </script>
 
-<div
-  role="button"
-  tabindex="0"
+<a
+  href={url}
   on:mouseenter={handleMouseEnter}
   class:blurred
   class="flex flex-col gap-6 items-center cursor-pointer hover:scale-110 transition-all"
@@ -30,7 +30,7 @@
     <h3 class="title text-lg text-theme-white font-bold">{title}</h3>
     <span class="text-xs">{@html description}</span>
   </div>
-</div>
+</a>
 
 <style>
   .blurred {
