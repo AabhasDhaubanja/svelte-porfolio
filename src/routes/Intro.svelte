@@ -21,14 +21,14 @@
       <h2 class="title text-3xl md:text-4xl xl:text-6xl font-bold">
         I build user-friendly and visually appealing web applications
       </h2>
-      <div class="flex justify-center gap-4">
+      <div class="flex justify-center items-center gap-4">
         <CoolButton>
           <div class="flex gap-2 items-center">
             <Pen />
             Blog
           </div>
         </CoolButton>
-        <TextButton>About Me</TextButton>
+        <TextButton href="/about">About Me</TextButton>
       </div>
       <div class="bounce py-12">
         <TextButton>
