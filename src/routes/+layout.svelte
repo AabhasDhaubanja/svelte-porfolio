@@ -40,6 +40,13 @@
     padding-right: 0px;
   }
 
+  :global(a:focus-visible),
+  :global(a:active) {
+    outline: none;
+    color: theme("colors.theme-white");
+    text-shadow: 4px 4px 4px rgba(94, 234, 212, 0.4);
+  }
+
   @media screen and (max-width: 640px) {
     :global(section) {
       padding-left: 12px;

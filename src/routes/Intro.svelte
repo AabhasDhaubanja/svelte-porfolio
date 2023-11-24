@@ -22,7 +22,7 @@
         I build user-friendly and visually appealing web applications
       </h2>
       <div class="flex justify-center items-center gap-4">
-        <CoolButton>
+        <CoolButton href="/blog">
           <div class="flex gap-2 items-center">
             <Pen />
             Blog
