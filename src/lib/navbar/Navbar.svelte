@@ -1,11 +1,12 @@
 <script>
-  import Logo from "./Logo.svelte";
+  import Logo from "../Logo.svelte";
   import Joystick from "$svgs/Joystick.svelte";
   import PersonAdd from "$svgs/PersonAdd.svelte";
   import Phone from "$svgs/Phone.svelte";
   import Menu from "$svgs/Menu.svelte";
   import { fade } from "svelte/transition";
   import Close from "$svgs/Close.svelte";
+  import { trapFocus } from "./actions";
 
   let open = false;
 
@@ -56,7 +57,12 @@
 </nav>
 
 {#if open}
-  <div class="drawer" in:fade={{ duration: 200 }} out:fade={{ duration: 200 }}>
+  <div
+    class="drawer"
+    in:fade={{ duration: 200 }}
+    out:fade={{ duration: 200 }}
+    use:trapFocus
+  >
     <div class="relative flex justify-center items-center w-full h-full">
       <div
         role="button"
@@ -64,11 +70,16 @@
         on:keypress={handleClose}
         on:click={handleClose}
         class="absolute right-12 top-12 pr-1"
+        id="navbar-close"
       >
         <Close />
       </div>
       <div class="flex flex-col gap-12 text-theme-white">
-        <a class="flex gap-4 items-center" href="/projects">
+        <a
+          class="flex gap-4 items-center"
+          href="/projects"
+          on:click={handleClose}
+        >
           <Joystick height={32} width={32} />
           <span class="font-medium">Projects</span>
         </a>
@@ -76,7 +87,11 @@
           <PersonAdd height={32} width={32} />
           <span class="font-medium">Socials</span>
         </a>
-        <a class="flex gap-4 items-center" href="/contact">
+        <a
+          class="flex gap-4 items-center"
+          href="/contact"
+          on:click={handleClose}
+        >
           <Phone height={32} width={32} />
           <span class="font-medium">Contact</span>
         </a>

@@ -3,7 +3,7 @@
   import { flip } from "svelte/animate";
   import { toasts } from "./store";
   import Tick from "$svgs/Tick.svelte";
-  import Close from "$svgs/CLose.svelte";
+  import Close from "$svgs/Close.svelte";
 </script>
 
 <div class="toast-wrapper">

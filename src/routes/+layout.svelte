@@ -1,9 +1,9 @@
 <script>
   import Footer from "$lib/Footer.svelte";
-  import Navbar from "$lib/Navbar.svelte";
+  import Navbar from "$lib/navbar/Navbar.svelte";
 </script>
 
-<div class="p-8">
+<div class="p-8 flex justify-center">
   <Navbar />
 </div>
 <slot />
