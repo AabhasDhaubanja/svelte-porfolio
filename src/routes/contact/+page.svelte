@@ -12,28 +12,6 @@
   let subject: string = "";
 
   let loading = false;
-
-  const handleSubmit = () => {
-    loading = true;
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams({ name, email, subject }).toString(),
-    })
-      .then((res) => {
-        if (res.status.toString().startsWith("2")) {
-          toast("Message sent successfully");
-          name = "";
-          email = "";
-          subject = "";
-        } else {
-          toast("Something went wrong", "ERROR");
-        }
-      })
-      .catch(() => toast("Something went wrong", "ERROR"))
-      .finally(() => (loading = false));
-  };
 </script>
 
 <svelte:head>
@@ -50,10 +28,13 @@
   </div>
 
   <form
-    data-netlify="true"
+    name="contact"
     class="flex flex-col items-center gap-8 w-full"
-    on:submit|preventDefault={handleSubmit}
+    method="POST"
+    netlify-honeypot="bot-field"
+    data-netlify="true"
   >
+    <input type="hidden" name="form-name" value="contact" />
     <div class="flex flex-col gap-4 w-full sm:w-[500px]">
       <TextInput bind:value={name} name="name" title="Name" required />
       <TextInput

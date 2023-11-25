@@ -19,7 +19,7 @@
 <div>
   <label class="flex flex-col gap-2 w-full">
     <span class="uppercase text-xs">{title}</span>
-    <input {value} {type} on:input={handleInput} {required} />
+    <input {name} {value} {type} on:input={handleInput} {required} />
   </label>
 </div>
 
